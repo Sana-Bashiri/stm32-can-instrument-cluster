@@ -1,0 +1,5 @@
+case,frame_id,payload_hex,expected_value,basis
+speed_100,0x101,20 03 00 00 00 00 00 00,100 km/h,Source-derived conversion; not measured
+fractional_speed,0x101,AB 01 00 00 00 00 00 00,53 km/h (53.375 truncated),Current uint16 display conversion
+unused_speed_bits,0x101,20 F3 00 00 00 00 00 00,7780 before gauge handling; intended masked value 100,Current unmasked expression
+clock,0x430,28 23 0E 00 00 00 00 00,14:35:40,Current byte-copy extraction
